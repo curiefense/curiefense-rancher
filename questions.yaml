@@ -7,6 +7,15 @@ questions:
     label: Cluster Configuration
     group: "Cluster Configuration"
 
+questions:
+  - variable: aws.credentials.conversion
+    description: "You need to convert your AWS credentials with these commands cat << EOF | base64 -w0 [default] access_key = xx secret_key = xx EOF"
+    required: true
+    type: string
+    default: cluster-configuration-secret
+    label: Cluster Configuration
+    group: "Cluster Configuration"
+
   - variable: helm.version
     description: "Curiefense works with helm3 it is tested specifically in helm 3.2.4"
     required: true
